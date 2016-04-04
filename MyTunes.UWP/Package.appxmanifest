@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="b7d3b23c-4bf3-4bc5-be79-6d2413d27bbe"
-    Publisher="CN=Adrian"
+    Name="62a30ffa-c56f-43c0-8da2-5e5cdf1dfc82"
+    Publisher="CN=mark"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="b7d3b23c-4bf3-4bc5-be79-6d2413d27bbe" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="62a30ffa-c56f-43c0-8da2-5e5cdf1dfc82" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>MyTunes.UWP</DisplayName>
-    <PublisherDisplayName>Adrian</PublisherDisplayName>
+    <PublisherDisplayName>mark</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

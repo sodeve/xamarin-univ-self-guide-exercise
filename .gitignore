@@ -4,3 +4,6 @@ MyTunes.iOS/obj/
 MyTunes.UWP/obj/
 MyTunes.WP8/obj/
 packages/
+MyTunes.iOS/bin/
+PCL/bin/
+PCL/obj/

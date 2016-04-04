@@ -13,6 +13,6 @@ namespace MyTunes
 		public int TrackNumber { get; set; }
 		public int Year { get; set; }
 		public int BitRate { get; set; }
-	}
+	} 
 }
 
