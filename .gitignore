@@ -15,3 +15,6 @@ xam120 01/App1/App1/bin/
 xam120 01/App1/App1.WinPhone/obj/
 xam120 01/App1/App1.Windows/obj/
 xam120 01/App1/App1.UWP/obj/
+xam120 02/PhoneWord/PhoneWord.Droid/bin/
+**/obj/
+**/bin/
