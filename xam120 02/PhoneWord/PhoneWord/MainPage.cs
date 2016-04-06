@@ -13,7 +13,8 @@ namespace PhoneWord
         Entry phoneNumberText;
         Button translateButton;
         Button callButton;
-        
+        private string translatedNumber;
+
         public MainPage()
         {
             this.Padding = new Thickness(
@@ -40,14 +41,28 @@ namespace PhoneWord
                 Text = "Call",
                 IsEnabled = false
             });
-            translateButton.Clicked += TranslateButtonOnClicked;
+            translateButton.Clicked += OnTranslate;
+            callButton.Clicked += OnCall;
             Content = panel;
         }
 
-        private void TranslateButtonOnClicked(object sender, EventArgs eventArgs)
+        private async void OnCall(object sender, EventArgs eventArgs)
+        {
+            if (await this.DisplayAlert("Dial a Number",
+                "Would you like to call " + translatedNumber + " ?",
+                "Yes",
+                "No"))
+            {
+                var dialer = DependencyService.Get<IDialer>();
+                if (dialer != null)
+                    dialer.Dial(translatedNumber);
+            };
+        }
+
+        private void OnTranslate(object sender, EventArgs eventArgs)
         {
             var enteredNumber = phoneNumberText.Text;
-            var translatedNumber = PhonewordTranslator.ToNumber(enteredNumber);
+            translatedNumber = PhonewordTranslator.ToNumber(enteredNumber);
             if (!String.IsNullOrEmpty(translatedNumber))
             {
                 // TODO:
